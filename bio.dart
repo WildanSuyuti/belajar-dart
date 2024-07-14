@@ -1,6 +1,6 @@
 void main(List<String> args) {
   String name = "8";
-  name = "Muhammad";
+  name = "Muhammad bin Abdillah";
   int age = 20;
   double weight = 70.6;
   bool isMarried = true;
