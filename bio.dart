@@ -1,5 +1,5 @@
 void main(List<String> args) {
-  String name = "Abdullah";
+  String name = "8";
   name = "Muhammad";
   int age = 20;
   double weight = 70.6;
