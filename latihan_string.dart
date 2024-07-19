@@ -15,4 +15,10 @@ void main(List<String> args) {
 
   word = "";
   print("Apakah variable word kosong ? ${word.isEmpty}");
+
+  print("\n");
+  print("\n");
+
+  String namaLengkapAnda = "Muhammad Wildan Suyuti";
+  print(namaLengkapAnda);
 }
