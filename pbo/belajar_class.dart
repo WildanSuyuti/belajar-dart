@@ -1,20 +1,16 @@
 import 'student.dart';
 
 void main(List<String> args) {
-  Student student1 = Student();
-  student1.id = 1;
-  student1.name = "Abdurrahman";
-  student1.address = "Sidoarjo";
-  student1.grade = "A";
-  student1.printInfo();
+  Student student1 =
+      Student(id: 1, name: "Abdurrahman", address: "Sidoarjo", scores: 60);
+  student1.checkGrade();
+  student1.info();
 
-  Student student2 = Student();
-  student2.id = 2;
-  student2.name = "Abdullah";
-  student2.address = "Surabaya";
-  student2.grade = "C";
-  student2.printInfo();
-  student2.printInfo();
+  Student student2 =
+      Student(id: 1, name: "Abdullah", address: "Banyuwangi", scores: 80);
+
+  student2.checkGrade();
+  student2.info();
 
 /*   String studentName1 = "Abdullah";
   String studentAddress1 = "Sidoarjo";

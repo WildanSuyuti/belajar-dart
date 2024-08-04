@@ -2,51 +2,61 @@ class Student {
   int? id;
   String? name;
   String? address;
-  String? grade;
+  int scores;
 
-  String info() {
-    String posisiAbsen = "";
-    if (name?[0] == "A") {
-      posisiAbsen = "Absensi Awal";
+  // Student(this.id, this.name, this.address, this.scores);
+
+  // Student({
+  //   required this.id,
+  //   required this.name,
+  //   required this.address,
+  //   required this.scores,
+  // });
+
+  Student({this.id, this.name, this.address, this.scores = 0});
+
+  String checkGrade() {
+    if (scores > 50 && scores <= 60) {
+      return "C";
+    } else if (scores > 60 && scores <= 80) {
+      return "B";
+    } else if (scores > 80 && scores <= 100) {
+      return "A";
+    } else {
+      return "D";
     }
-    return "$posisiAbsen\nID: $id\nNama: $name\nAlamat: $address\nGrade: $grade";
   }
 
-  void printInfo() {
-    print(info());
-    // print("ID : $id");
-    // print("Nama Siswa : $name");
-    // print("Alamat Siswa : $address");
-    // print("Grade Siswa: $grade");
-    // print("\n");
+  void info() {
+    print("=============== Data Siswa ===============");
+    print("Nama: $name");
+    print("Alamat: $address");
+    print("Nilai: $scores");
+    print("Dari nilai tersebut gradenya adalah: ${checkGrade()}");
+    print("==========================================\n");
   }
 }
 
 void main(List<String> args) {
-  Student student = Student();
-  student.id = 99;
-  student.name = "Abdullah";
-  student.address = "Surabaya";
-  student.grade = "A";
-  student.id = 100;
-  student.info();
+  Student student0 = Student();
+  student0.name = "";
 
-  print(student.info());
+  Student student =
+      Student(id: 5, name: "Khalid", address: "Bondowoso", scores: 100);
 
-  // double height=90.7;
-  // String result = "$height";
+  List<Student> students = [
+    Student(id: 1, name: "Abdullah", address: "Surabaya", scores: 70),
+    Student(id: 2, name: "Abdurrahman", address: "Jakarta", scores: 40),
+    Student(id: 3, name: "Muhammad", address: "Bali", scores: 90),
+    Student(id: 4, name: "Ibrahim"),
+    student,
+  ];
 
-  // student.printInfo();
-  // print(student.info());
+  // for (int i = 0; i < students.length; i++) {
+  //   students[i].info();
+  // }
 
-/*   "Abdullah";
-  String name = "Abdullah";
-  print("\n");
-  print("Abdullah".length);
-  print(name.length);
-
-  List<int> numbers = [];
-  numbers.add(1); */
-
-  String operation = "";
+  for (var element in students) {
+    element.info();
+  }
 }
